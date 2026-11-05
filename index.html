@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GiaHuy Study | English Learning</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">G</div>
+        <div>
+          <h2>GiaHuy <span>Study</span></h2>
+          <small>ENGLISH LEARNING</small>
+        </div>
+      </div>
+
+      <div class="menu-label">MENU CHÍNH</div>
+      <nav>
+        <button class="nav-link active" data-page="home"><span>⌂</span> Tổng quan</button>
+        <button class="nav-link" data-page="library"><span>▤</span> Tài liệu học tập</button>
+        <button class="nav-link" data-page="quiz"><span>✎</span> Luyện tập Quiz</button>
+        <button class="nav-link" data-page="exam"><span>▣</span> Đề kiểm tra</button>
+        <button class="nav-link" data-page="arena"><span>⚔</span> Đấu trường</button>
+        <button class="nav-link" data-page="scores"><span>◷</span> Kết quả học tập</button>
+        <button class="nav-link" data-page="leaderboard"><span>♛</span> Bảng xếp hạng</button>
+        <button class="nav-link" data-page="assistant"><span>✧</span> AI Study Assistant</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-card">
+          <div class="mini-star">✦</div>
+          <b>Keep learning!</b>
+          <p>Every day is a new opportunity to improve your English.</p>
+        </div>
+        <div class="profile">
+          <div class="avatar">H</div>
+          <div><b id="profileName">Học sinh</b><small>English learner</small></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="breadcrumb">GiaHuy Study <span>/</span> <b id="pageName">Tổng quan</b></div>
+        <div class="top-actions">
+          <span class="online-dot"></span>
+          <span class="top-status">Learning mode</span>
+          <button class="top-avatar" id="changeName">H</button>
+        </div>
+      </header>
+
+      <section class="page active-page" id="home">
+        <div class="welcome">
+          <div>
+            <div class="eyebrow">YOUR ENGLISH JOURNEY STARTS HERE</div>
+            <h1>Xin chào, <span id="welcomeName">bạn</span>! 👋</h1>
+            <p>Hôm nay bạn muốn chinh phục kiến thức Tiếng Anh nào?</p>
+            <button class="primary-btn" data-go="quiz">Bắt đầu học ngay <span>→</span></button>
+          </div>
+          <div class="welcome-art">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="book-art">📘</div>
+            <div class="float-tag tag-one">ENGLISH</div>
+            <div class="float-tag tag-two">A+</div>
+            <div class="float-tag tag-three">✦</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon blue">▤</div>
+            <span>Tổng lượt làm bài</span>
+            <strong id="statAttempts">0</strong>
+            <small>Tiếp tục luyện tập nhé!</small>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green">✓</div>
+            <span>Điểm trung bình</span>
+            <strong id="statAverage">0.0</strong>
+            <small>Thang điểm 10</small>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon purple">⚡</div>
+            <span>Câu trả lời đúng</span>
+            <strong id="statCorrect">0</strong>
+            <small>Tích lũy qua các bài thi</small>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon orange">♛</div>
+            <span>Điểm tích lũy</span>
+            <strong id="statPoints">0</strong>
+            <small>Study points</small>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><h2>Khám phá GiaHuy Study</h2><p>Những khu vực dành cho hành trình học tập của bạn.</p></div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card" data-go="library"><div class="feature-icon">📚</div><h3>English Library</h3><p>Khám phá từ vựng và kiến thức.</p><span>Khám phá →</span></div>
+          <div class="feature-card" data-go="quiz"><div class="feature-icon">✍️</div><h3>Practice Quiz</h3><p>Rèn luyện qua câu hỏi trắc nghiệm.</p><span>Luyện tập →</span></div>
+          <div class="feature-card" data-go="arena"><div class="feature-icon">🏆</div><h3>Competition Arena</h3><p>Thử sức với bạn bè của bạn.</p><span>Vào đấu trường →</span></div>
+          <div class="feature-card" data-go="assistant"><div class="feature-icon">🤖</div><h3>Study Assistant</h3><p>Hỗ trợ giải thích kiến thức.</p><span>Trò chuyện →</span></div>
+        </div>
+
+        <div class="bottom-grid">
+          <div class="panel">
+            <div class="panel-heading"><div><h3>Hoạt động gần đây</h3><p>Lịch sử luyện tập của bạn</p></div></div>
+            <div id="recentActivity" class="empty-state">Chưa có hoạt động nào. Hãy làm bài Quiz đầu tiên nhé!</div>
+          </div>
+          <div class="panel motivation">
+            <div class="motivation-symbol">✦</div>
+            <h3>Daily motivation</h3>
+            <p>“A little progress each day adds up to big results.”</p>
+            <small>— Keep moving forward —</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="library">
+        <div class="page-title"><div class="eyebrow">KNOWLEDGE CENTER</div><h1>English Library 📚</h1><p>Kho tài liệu và kiến thức Tiếng Anh của bạn.</p></div>
+        <div class="search-box"><span>⌕</span><input id="librarySearch" placeholder="Tìm kiếm từ vựng, ngữ pháp..."></div>
+        <div class="library-grid" id="libraryGrid"></div>
+      </section>
+
+      <section class="page" id="quiz">
+        <div class="page-title"><div class="eyebrow">PRACTICE EVERY DAY</div><h1>Practice Quiz ✍️</h1><p>Kiểm tra kiến thức và cải thiện kỹ năng Tiếng Anh.</p></div>
+        <div class="quiz-intro panel">
+          <div><div class="eyebrow">ENGLISH CHALLENGE</div><h2>Sẵn sàng thử thách bản thân?</h2><p>Mỗi lượt gồm 10 câu hỏi ngẫu nhiên từ ngân hàng câu hỏi.</p></div>
+          <div class="quiz-big-icon">🧠</div>
+        </div>
+        <div class="quiz-settings panel">
+          <label for="quizLevel">Chọn cấp độ</label>
+          <select id="quizLevel"><option value="all">Tất cả cấp độ</option><option value="easy">Cơ bản</option><option value="medium">Trung bình</option><option value="hard">Nâng cao</option></select>
+          <button class="primary-btn" id="startQuiz">Bắt đầu làm bài →</button>
+        </div>
+        <div id="quizArea"></div>
+      </section>
+
+      <section class="page" id="exam">
+        <div class="page-title"><div class="eyebrow">TEST YOUR KNOWLEDGE</div><h1>Đề kiểm tra 📝</h1><p>Thực hành các bài kiểm tra Tiếng Anh có tính giờ.</p></div>
+        <div class="exam-card panel">
+          <div class="exam-symbol">📋</div><div class="exam-info"><span class="level-tag">GENERAL ENGLISH</span><h2>English Mini Test</h2><p>10 câu hỏi · 10 phút · Thang điểm 10</p><small>Kiểm tra từ vựng và ngữ pháp cơ bản.</small></div>
+          <button class="primary-btn" id="startExam">Vào thi →</button>
+        </div>
+        <div id="examArea"></div>
+      </section>
+
+      <section class="page" id="arena">
+        <div class="page-title"><div class="eyebrow">PLAY • COMPETE • LEARN</div><h1>Competition Arena ⚔️</h1><p>Đấu trường Tiếng Anh – nơi kiến thức tạo nên chiến thắng!</p></div>
+        <div class="arena-banner"><div><span>THE ENGLISH BATTLE</span><h2>Ready to challenge your friends?</h2><p>Ai sẽ là người dẫn đầu bảng xếp hạng?</p></div><div class="arena-trophy">🏆</div></div>
+        <div class="arena-grid">
+          <div class="panel arena-option"><div class="arena-icon">⚡</div><h3>Thi nhanh</h3><p>Bắt đầu một lượt thi thử thách với bộ câu hỏi chung.</p><button class="primary-btn" id="quickBattle">Thi ngay →</button></div>
+          <div class="panel arena-option"><div class="arena-icon">🚪</div><h3>Tạo phòng thi</h3><p>Tạo mã phòng để bạn bè cùng tham gia trên thiết bị này.</p><button class="primary-btn" id="createRoom">Tạo phòng →</button></div>
+          <div class="panel arena-option"><div class="arena-icon">🎮</div><h3>Tham gia phòng</h3><p>Nhập mã phòng để tham gia lượt thi mô phỏng.</p><input id="roomCode" placeholder="Nhập mã phòng"><button class="secondary-btn" id="joinRoom">Tham gia phòng</button></div>
+        </div>
+        <div id="arenaMessage" class="panel arena-message">💡 Mẹo: Hãy luyện tập trước khi bước vào đấu trường!</div>
+        <div class="panel">
+          <div class="panel-heading"><div><h3>Luật thi đấu</h3><p>Competition rules</p></div></div>
+          <ul class="rules"><li>Mỗi lượt thi gồm 10 câu hỏi.</li><li>Mỗi câu trả lời đúng được cộng điểm.</li><li>Người có tổng điểm cao hơn sẽ xếp hạng cao hơn.</li><li>Không tải lại trang khi đang làm bài để tránh mất lượt thi.</li></ul>
+        </div>
+      </section>
+
+      <section class="page" id="scores">
+        <div class="page-title"><div class="eyebrow">YOUR PERFORMANCE</div><h1>Kết quả học tập 📊</h1><p>Theo dõi quá trình tiến bộ của bạn.</p></div>
+        <div class="stats-grid">
+          <div class="stat-card"><span>Tổng bài đã làm</span><strong id="scoreAttempts">0</strong></div>
+          <div class="stat-card"><span>Điểm trung bình</span><strong id="scoreAverage">0.0</strong></div>
+          <div class="stat-card"><span>Điểm cao nhất</span><strong id="scoreBest">0</strong></div>
+          <div class="stat-card"><span>Tổng Study points</span><strong id="scorePoints">0</strong></div>
+        </div>
+        <div class="panel history-panel"><div class="panel-heading"><div><h3>Lịch sử làm bài</h3><p>Các kết quả được lưu trên trình duyệt này.</p></div><button class="text-btn" id="clearHistory">Xóa lịch sử</button></div><div id="historyList" class="empty-state">Bạn chưa có kết quả nào.</div></div>
+      </section>
+
+      <section class="page" id="leaderboard">
+        <div class="page-title"><div class="eyebrow">TOP LEARNERS</div><h1>Bảng xếp hạng 🏆</h1><p>Ghi dấu thành tích trên hành trình chinh phục Tiếng Anh.</p></div>
+        <div class="leader-hero"><div class="leader-crown">♛</div><h2>Study Leaderboard</h2><p>Thi đấu hết mình – học tập hết sức!</p></div>
+        <div class="panel">
+          <div class="panel-heading"><div><h3>Top học sinh</h3><p>Xếp hạng theo Study points</p></div><span class="live-label">● LOCAL</span></div>
+          <div id="leaderboardList"></div>
+        </div>
+        <p class="notice">Lưu ý: Bảng xếp hạng hiện chỉ chứa dữ liệu trên trình duyệt của bạn và các hồ sơ mẫu. Chưa đồng bộ người chơi trên Internet.</p>
+      </section>
+
+      <section class="page" id="assistant">
+        <div class="page-title"><div class="eyebrow">YOUR STUDY COMPANION</div><h1>AI Study Assistant ✨</h1><p>Đặt câu hỏi và ôn tập Tiếng Anh cùng trợ lý học tập.</p></div>
+        <div class="chat-panel panel">
+          <div class="chat-heading"><div class="bot-avatar">✧</div><div><b>GiaHuy Study Assistant</b><small><span class="online-dot"></span> Trợ lý học tập cơ bản</small></div></div>
+          <div class="chat-messages" id="chatMessages"><div class="bot-message">Xin chào! Mình có thể giúp bạn ôn từ vựng, ngữ pháp và giải thích một số kiến thức Tiếng Anh. Hãy thử hỏi mình nhé! 👋</div></div>
+          <div class="chat-suggestions"><button data-question="Giải thích thì hiện tại hoàn thành">Present Perfect</button><button data-question="Phân biệt little và a little">Little / A little</button><button data-question="Cách dùng although và despite">Although / Despite</button></div>
+          <form id="chatForm" class="chat-input"><input id="chatInput" placeholder="Nhập câu hỏi Tiếng Anh..." autocomplete="off"><button type="submit">Gửi ↑</button></form>
+          <small class="chat-disclaimer">Đây là trợ lý mẫu chạy trong trình duyệt, chưa kết nối mô hình AI trực tuyến. Hãy kiểm tra lại kiến thức quan trọng với tài liệu học tập.</small>
+        </div>
+      </section>
+
+      <footer>© 2026 GiaHuy Study · Learn today, lead tomorrow. <span>Made for English learners 💙</span></footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
